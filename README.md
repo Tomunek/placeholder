@@ -2,7 +2,7 @@
 
 Simple application for adding watermarks to images
 
-# TODO: add screenshots
+TODO: add screenshots
 
 ## Usage
 ```console
