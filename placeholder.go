@@ -60,14 +60,14 @@ func main() {
 	constColor := &color.RGBA{255, 0, 0, 255}
 
 	// Prepare for parsing command line args
-	useConstColor := flag.Bool("c", false, "Add watermark in red")
-	tiltWatermark := flag.Bool("t", false, "Tilt watermark")
+	trueConst := true
 
+	useConstColor := &trueConst
+	tiltWatermark := &trueConst
 	// Custom Usage message
 	flag.Usage = func() {
 		fmt.Fprintf(flag.CommandLine.Output(), "Usage of %s:\n", os.Args[0])
-		fmt.Fprintf(flag.CommandLine.Output(), "%s [flags] file\n", os.Args[0])
-		flag.PrintDefaults()
+		fmt.Fprintf(flag.CommandLine.Output(), "%s file\n", os.Args[0])
 	}
 
 	// Parse args
